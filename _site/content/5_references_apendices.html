@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Distant Listening, Using Python and Apps Scripts to Text Mine and Tag Oral History Collections</title>
+<meta name="description" content="Article submission for Code4Lib, Summer 2024">
+<meta name="keywords" content="">
+<meta name="author" content="Andrew Weymouth">
+<link rel="icon" type="image/png" href="http://localhost:4000/favicon.png">
+
+<!--
+  _      __         __        __           ______               __     __     
+ | | /| / /__  ____/ /__ ___ / /  ___  ___/_  __/__ __ _  ___  / /__ _/ /____ 
+ | |/ |/ / _ \/ __/  '_/(_-</ _ \/ _ \/ _ \/ / / -_)  ' \/ _ \/ / _ `/ __/ -_)
+ |__/|__/\___/_/ /_/\_\/___/_//_/\___/ .__/_/  \__/_/_/_/ .__/_/\_,_/\__/\__/ 
+                                    /_/                /_/                    
+
+    built with workshop-template-b, evanwill, https://github.com/evanwill/workshop-template-b
+--> 
+   
+<!-- Open Graph meta -->
+<meta property="og:title" content="Distant Listening, Using Python and Apps Scripts to Text Mine and Tag Oral History Collections" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Article submission for Code4Lib, Summer 2024" />
+<meta property="og:image" content="http://localhost:4000/images/banner.jpg" />
+<meta property="og:site_name" content="Distant Listening, Using Python and Apps Scripts to Text Mine and Tag Oral History Collections" />
+<meta property="og:url" content="http://localhost:4000/content/5_references_apendices.html" />
+<meta property="og:locale" content="en_US" />
+<!-- schema.org JSON-LD -->
+<script type="application/ld+json">{ "@context":"http://schema.org", "@type":"WebPage", "headline":"Distant Listening, Using Python and Apps Scripts to Text Mine and Tag Oral History Collections", "author": { "@type":"Person", "name":"Andrew Weymouth"}, "description":"Article submission for Code4Lib, Summer 2024", "image": "http://localhost:4000/images/banner.jpg", "url":"http://localhost:4000/content/5_references_apendices.html" }</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/lib/spotlight.min.css">
+<link rel="stylesheet" href="/assets/lib/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="/assets/css/styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+
+<!-- Last build date: 2024-07-17 -->
+  </head>
+
+  <body class="d-flex flex-column h-100">
+    <div id="skip-to-content"><a href="#maincontent">Skip to main content</a></div>
+    <header>
+    <nav class="navbar navbar-light pb-lg-0 border-bottom" style="background-color: #F0F8FF;">
+    <div class="container">
+        <h1 class="navbar-brand" style="white-space: normal;"><a href="/">
+            
+            Distant Listening, Using Python and Apps Scripts to Text Mine and Tag Oral History Collections
+        </a></h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+            <ul class="navbar-nav nav-tabs justify-content-end">
+            
+                <li class="nav-item">
+                    <a class="nav-link p-3 h-100" href="/content/1_background.html">
+                        
+                            Background
+                        
+                    </a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link p-3 h-100" href="/content/2_challenges.html">
+                        
+                            Challenges
+                        
+                    </a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link p-3 h-100" href="/content/3_process.html">
+                        
+                            Process
+                        
+                    </a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link p-3 h-100" href="/content/4_findings.html">
+                        
+                            Findings
+                        
+                    </a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link active p-3 h-100" href="/content/5_references_apendices.html">
+                        
+                            References and Appendices
+                        
+                    </a>
+                </li>
+            
+            </ul>  
+        </div>
+    </div>
+</nav>
+
+    </header>
+
+    <main id="maincontent" role="main" aria-label="Content" class="flex-shrink-0">
+      
+      <div class="container my-4">
+<h1></h1>
+
+<div class="ms-5 mb-3 border-bottom">
+    </div>
+    
+<div class="my-4">
+
+
+<p class="h6 shadow-sm p-3 about-nav sticky-top" style="background-color: #F0F8FF;">
+    Contents: <a class="mx-2" href="#references">References</a> | <a class="mx-2" href="#notes">Notes</a> | <a class="mx-2" href="#appendices">Appendices</a> | <a class="mx-2" href="#appendix-1-excerpt-of-python-text-mining-tool">Appendix 1. Excerpt of Python Text Mining Tool</a> | <a class="mx-2" href="#appendix-2-apps-script-example-for-linking-transcript-to-primary-tag-sheet">Appendix 2. Apps Script Example for Linking Transcript to Primary Tag Sheet</a> | <a class="mx-2" href="#about-the-author">About the Author</a> 
+</p>
+
+<div class="symbol-container">
+    <p class="symbol">&#10042;</p>
+</div>
+
+<h2 id="references">References</h2>
+
+<p>Link J. Why Racial Bias Still Haunts Speech-Recognition AI. Built In; 2020 [cited 2024 Jul 8]. Available from: https://builtin.com/artificial-intelligence/racial-bias-speech-recognition-systems</p>
+
+<p>Freund A. From.wav to.txt: why we still need transcripts in the digital age. Internet. 2024. [cited 2024 Jul 8].</p>
+
+<p>Allen SE. Resisting the editorial ego: editing oral history. Oral Hist Rev. 1982;10(1):33-45. DOI 10.1093/ohr/10.1.33. [cited 2024 Jul 8]. Available from: https://www.tandfonline.com/doi/full/10.1093/ohr/10.1.33</p>
+
+<h2 id="notes">Notes</h2>
+
+<p>[1] Digital Collections, University of Idaho. University of Idaho Library Digital Initiatives; 2024 [cited 2024 Jul 8]. Available from: https://www.lib.uidaho.edu/digital/collections.html</p>
+
+<p>[2] Speech to Text in Premiere Pro FAQ. Adobe; [cited 2024 Jul 8]. Available from: https://helpx.adobe.com/content/help/en/premiere-pro/using/speech-to-text-faq.html</p>
+
+<p>[3] Department of Commerce and Labor, Bureau of Statistics. Thirteenth Census of the United States: 1910. Statistics for Idaho. Washington (DC): Government Printing Office; 1913. [cited 2024 Jul 8]. Available from: https://www2.census.gov/library/publications/decennial/1910/abstract/statistics-for-idaho.pdf</p>
+
+<h2 id="appendices">Appendices</h2>
+
+<h4 id="appendix-1-excerpt-of-python-text-mining-tool">Appendix 1. Excerpt of Python Text Mining Tool</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import pandas as pd
+import string
+from nltk.corpus import stopwords
+from collections import Counter
+import re
+from textblob import TextBlob
+
+Download NLTK stopwords data
+import nltk
+nltk.download('stopwords')
+
+Define preprocess_text function
+def preprocess_text(text):
+    if isinstance(text, str):  # Check if text is a string
+        text = re.sub(r'\b\w{1,4}\b', '', text)  # Remove short words (length &lt;= 4)
+        text = text.translate(str.maketrans('', '', string.punctuation)) 
+        text = text.lower()  # Convert text to lowercase
+    else:
+        text = ''  # Replace NaNs with an empty string
+    return text
+
+Load stopwords for both Spanish and English
+stop_words_spanish = set(stopwords.words('spanish'))
+stop_words_english = set(stopwords.words('english'))
+
+Combine both sets of stopwords
+stop_words = stop_words_spanish.union(stop_words_english)
+
+import os
+
+Directory containing CSV files
+directory = 'C:\\Users\\aweymouth\\Documents\\Github\\transcript_mining_base\\CSV'
+
+List of CSV file names
+file_names = [
+    'rwhp070.csv',
+    'rwhp075.csv',
+    'rwhp079.csv',
+    'rwhp083.csv',
+    'rwhp088.csv',
+    'rwhp109.csv',
+    'rwhp123.csv',
+    'rwhp174.csv',
+    'rwhp225.csv',
+    'rwhp261.csv',
+    'rwhp277.csv',
+    'rwhp277.csv',
+    'rwhp297.csv',
+    'rwhp320.csv',
+    'rwhp323.csv',
+    'rwhp378.csv',
+    'rwhp385.csv',
+    'rwhp410.csv',
+    'rwhp418.csv',
+    'rwhp420.csv',
+    'rwhp421.csv',
+    'rwhp422.csv',
+    'rwhp425.csv',
+    'rwhp426.csv',
+    'rwhp427.csv'
+]
+
+Construct file paths using os.path.join()
+file_paths = [os.path.join(directory, file_name) for file_name in file_names]
+
+dfs = [pd.read_csv(file_path, encoding='utf-8') for file_path in file_paths]
+
+Concatenate text data from all dataframes into a single corpus
+corpus = ''
+for df in dfs:
+    text_series = df['text'].fillna('').astype(str).str.lower().str.strip()  # Extract and preprocess text column
+    corpus += ' '.join(text_series) + ' '  # Concatenate preprocessed text with space delimiter
+
+Preprocess the entire corpus
+cleaned_corpus = preprocess_text(corpus)
+
+Remove stopwords from the corpus
+filtered_words = [word for word in cleaned_corpus.split() if word not in stop_words and len(word) &gt;= 5]
+
+Count the frequency of each word
+word_freq = Counter(filtered_words)
+
+Get top 100 most frequent distinctive words with occurrences
+top_distinctive_words = word_freq.most_common(100)
+
+=== General Section ===
+
+from collections import Counter
+import re
+
+def find_agriculture_terms(corpus):
+    # Define a list of agriculture-related terms
+    agriculture_terms = ["harvest", "tractor", "acreage", "crop", "livestock", "farm field", "barn building", "ranch", "garden", "orchard", "dairy", "cattle", "poultry", "equipment", "fertilizer", "seed", "irrigation", "plow", "farmhand", "hoe", "shovel", "milking", "hay", "silage", "compost", "weeding", "crop rotation", "organic", "gmo", "sustainable", "farming", "rural", "homestead", "tilling", "wheat", "corn maize", "soybean", "potato", "apple fruit", "berry", "honey", "apiary", "pasture", "combine harvester", "trailer", "baler", "thresher"]
+
+    # Initialize a Counter to tally occurrences of agriculture-related terms
+    agriculture_word_freq = Counter()
+
+    # Tokenize the corpus to handle multi-word expressions
+    tokens = re.findall(r'\b\w+\b', corpus.lower())
+
+    # Iterate over each token in the corpus
+    for word in tokens:
+        # Check if the token is an agriculture-related term
+        if word in agriculture_terms:
+            agriculture_word_freq[word] += 1
+
+    # Return the top 50 most common agriculture-related terms
+    return agriculture_word_freq.most_common(50)
+
+Call the function to find agriculture-related terms in the corpus
+top_agriculture_terms = find_agriculture_terms(corpus)
+
+Print the top 50 agriculture-related terms
+print("## agriculture")
+for word, count in top_agriculture_terms:
+    print(f"{word.capitalize()}: {count}")
+</code></pre></div></div>
+
+<h4 id="appendix-2-apps-script-example-for-linking-transcript-to-primary-tag-sheet">Appendix 2. Apps Script Example for Linking Transcript to Primary Tag Sheet</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function fillTags() {
+  // Get the active spreadsheet
+  var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  
+  // Get the transcript sheet by name
+  var transcriptSheet = spreadsheet.getSheetByName("Callison3");
+  if (!transcriptSheet) {
+    Logger.log("Transcript sheet not found");
+    return;
+  }
+  
+  // Set the header in cell E1 to "tags"
+  transcriptSheet.getRange("E1").setValue("tags");
+  
+  // Get the tags spreadsheet by URL
+  var tagsSpreadsheet = SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/1soOfgdAjik_TL8WX9dDV9BaFb1RQJc8_BVu7sBGnNUE/edit?gid=419710039#gid=419710039");
+  if (!tagsSpreadsheet) {
+    Logger.log("Tags spreadsheet not found");
+    return;
+  }
+  
+  // Get the tags sheet within the tags spreadsheet
+  var tagsSheet = tagsSpreadsheet.getSheetByName("tags");
+  if (!tagsSheet) {
+    Logger.log("Tags sheet not found");
+    return;
+  }
+  
+  // Get the range of the transcript column
+  var transcriptRange = transcriptSheet.getRange("D2:D" + transcriptSheet.getLastRow());
+  var transcriptValues = transcriptRange.getValues();
+  
+  // Get the range of example words and tags in the tags sheet
+  var exampleWordsRange = tagsSheet.getRange("B2:B" + tagsSheet.getLastRow());
+  var tagsRange = tagsSheet.getRange("A2:A" + tagsSheet.getLastRow());
+  var exampleWordsValues = exampleWordsRange.getValues();
+  var tagsValues = tagsRange.getValues();
+  
+  // Create a map of example words to tags
+  var tagsMap = {};
+  for (var i = 0; i &lt; exampleWordsValues.length; i++) {
+    var word = exampleWordsValues[i][0].toLowerCase();
+    var tag = tagsValues[i][0];
+    tagsMap[word] = tag;
+  }
+  
+  // Initialize an array to store the tags for each transcript entry
+  var transcriptTags = [];
+  
+  // Loop through each transcript entry
+  for (var i = 0; i &lt; transcriptValues.length; i++) {
+    var text = transcriptValues[i][0];
+    var uniqueTags = [];
+    
+    if (typeof text === 'string') {
+      // Use regular expression to extract words and handle punctuation
+      var words = text.match(/\b\w+['-]?\w*|\w+['-]?\w*\b/g);
+      
+      // Check each word in the transcript entry against the tags map
+      if (words) {
+        for (var j = 0; j &lt; words.length; j++) {
+          var word = words[j].toLowerCase().replace(/[.,!?;:()]/g, '');
+          var singularWord = word.endsWith('s') ? word.slice(0, -1) : word;
+          
+          if (tagsMap.hasOwnProperty(word) &amp;&amp; !uniqueTags.includes(tagsMap[word])) {
+            uniqueTags.push(tagsMap[word]);
+          } else if (tagsMap.hasOwnProperty(singularWord) &amp;&amp; !uniqueTags.includes(tagsMap[singularWord])) {
+            uniqueTags.push(tagsMap[singularWord]);
+          }
+        }
+      }
+    }
+    
+    // Add the determined tags to the array
+    transcriptTags.push([uniqueTags.join(";")]);
+  }
+  
+  // Get the range of the tags column in the transcript sheet, starting from E2
+  var tagsColumn = transcriptSheet.getRange("E2:E" + (transcriptTags.length + 1));
+  
+  // Set the values in the tags column to the determined tags
+  tagsColumn.setValues(transcriptTags);
+}
+</code></pre></div></div>
+<h2 id="about-the-author">About the Author</h2>
+
+<p>Andrew Weymouth is the Digital Initiatives Librarian at University of Idaho, specializing in static web design to curate the institution’s special collections and partner with faculty and students on fellowship projects. His work spans digital scholarship projects at the universities of Oregon and Washington and the Tacoma Northwest Room archives, including long form audio public history projects, architectural databases, oral history and network visualizations. He writes about labor, architecture, underrepresented communities and using digital methods to survey equity in archival collections.</p>
+
+
+</div>
+
+</div>
+      
+    </main>
+
+    <footer class="site-footer bg-light-blue mt-auto">
+  <div class="container">
+    <nav class="mt-3 mb-4">
+      <ul class="nav nav-pills nav-fill">
+        
+        <li class="nav-item"><a class="nav-link h3" href="/content/1_background.html">Background</a></li>
+        
+        <li class="nav-item"><a class="nav-link h3" href="/content/2_challenges.html">Challenges</a></li>
+        
+        <li class="nav-item"><a class="nav-link h3" href="/content/3_process.html">Process</a></li>
+        
+        <li class="nav-item"><a class="nav-link h3" href="/content/4_findings.html">Findings</a></li>
+        
+        <li class="nav-item"><a class="nav-link h3 active" href="/content/5_references_apendices.html">References and Appendices</a></li>
+        
+      </ul>
+    </nav>
+    <div class="row align-items-center pb-5">
+        <div id="footer-title" class="col-md">
+          <a class="h5" href="/">Distant Listening, Using Python and Apps Scripts to Text Mine and Tag Oral History Collections</a>
+          <br>
+          <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0, </a> 2024 <a href="https://github.com/aweymo">Andrew Weymouth</a>
+        </div>
+        <div class="col-md">
+          
+          <script>
+            function site_search() {
+              var query = document.getElementById("site-search").value;
+              window.open("/search/index.html?q=" + encodeURIComponent(query), "_self" );
+            }
+          </script>
+          <form class="form-inline my-2 my-lg-0 float-end" role="search" id="search" onsubmit="site_search(); return false;">
+            <div class="input-group">
+              <input id="site-search" class="form-control" type="text" placeholder="Search" aria-label="Search box">
+              <div class="input-group-append">
+                <button class="btn btn-secondary" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"> <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/> </svg><span class="visually-hidden">submit search</span></button>
+              </div>
+            </div>
+          </form>
+          
+        </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Bootstrap JS bundle -->
+<script src="/assets/lib/bootstrap.bundle.min.js"></script>
+<!-- load other optional js -->
+
+
+<script src="/assets/lib/lazysizes.min.js" async></script>
+<script src="/assets/lib/spotlight.min.js" defer></script>
+<script>
+    // When the user scrolls down from the top of the document, show the button
+    window.onscroll = function () {
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+            document.getElementById("scroll-to-top").style.display = "block";
+            document.getElementById("scroll-to-top").style.color = "#00448c"; // Change button color to #00448c
+        } else {
+            document.getElementById("scroll-to-top").style.display = "none";
+        }
+    }
+    // scroll to top function
+    function scrollToTop() {
+        window.scroll({
+            top: 0, 
+            left: 0, 
+            behavior: 'smooth'
+        });
+    }
+</script>
+<button id="scroll-to-top" type="button" class="btn btn-link btn-lg" onclick="scrollToTop();" title="Back to Top" aria-label="Back to Top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-square" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 9.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/> </svg>
+</button>
+
+
+
+  </body>
+
+</html>
