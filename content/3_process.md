@@ -6,6 +6,8 @@ gallery: true
 
 {% include feature/nav-menu.html sections="Premiere;Python Text Mining;Primary Tag Sheet;Formatting;Apps Script;Copyediting" %}
 
+**(Expanded process visualization: download, premiere, Python, Primary Tag Sheet, Apps Script connects to all Transcripts)**
+
 ## Premiere
 
 When I joined in fall 2023, the department was principally using a free Otter.ai account for transcription services with mixed success. Drawing from my previous experience working for a digital encyclopedia, I tested Adobe Premiere’s transcription tools and found it uniquely well-suited for the Oral History as Data framework. 

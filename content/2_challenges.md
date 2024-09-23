@@ -6,7 +6,7 @@ gallery: true
 
 The time-intensive nature of transcription has made many oral history collections an undervalued format in digital initiatives. Meeting accessibility standards involves not only transcribing recordings but also presenting them in an intuitive, keyboard navigable digital interface. OHD developer Devin Becker’s solution in the Oral History as Data (OHD) template displays the audio at the top of the page, followed by a visualization of the entire recording displaying the colored tags, a key to the tags, a search bar for keyword queries and the transcription below. This allows researchers to follow along with the timestamped transcript as the audio plays. 
 
-**(OHD gif from UCLA pres)**
+{% include gallery-figure.html img="dtt_02.gif" alt="Screenshot of Oral History as data tagging interface and keyword search functionality." caption="Oral History as Data tagging interface and keyword searching functionality." width="100%" %}
 
 Despite this advancement, the initial transcription process has remained a significant hurdle. Since OHD’s development in 2016, machine learning speech detection abilities have improved considerably. However, earlier free options were either so poor that they were negligible to working from scratch, or they were prohibitively expensive for a higher education institution. Completely human driven transcription has its own challenges: it’s tedious, slow moving work that isn’t going to be the highlight of a student worker’s CV, and, without close supervision, can result in lapses in quality not dissimilar to poor machine learning. 
 
