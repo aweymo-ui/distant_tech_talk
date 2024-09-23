@@ -126,12 +126,8 @@
 
 
 <p class="h6 shadow-sm p-3 about-nav sticky-top" style="background-color: #F0F8FF;">
-    Contents: <a class="mx-2" href="#premiere">Premiere</a> | <a class="mx-2" href="#python-text-mining">Python Text Mining</a> | <a class="mx-2" href="#primary-tag-sheet">Primary Tag Sheet</a> | <a class="mx-2" href="#formatting">Formatting</a> | <a class="mx-2" href="#apps-script">Apps Script</a> 
+    Contents: <a class="mx-2" href="#premiere">Premiere</a> | <a class="mx-2" href="#python-text-mining">Python Text Mining</a> | <a class="mx-2" href="#primary-tag-sheet">Primary Tag Sheet</a> | <a class="mx-2" href="#formatting">Formatting</a> | <a class="mx-2" href="#apps-script">Apps Script</a> | <a class="mx-2" href="#copyediting">Copyediting</a> 
 </p>
-
-<div class="symbol-container">
-    <p class="symbol">&#10042;</p>
-</div>
 
 <h2 id="premiere">Premiere</h2>
 
@@ -163,21 +159,27 @@
 <figure class="figure d-block text-center p-3">
     <a class="spotlight" href="/images/dl_01.png"><img data-src="/images/dl_01.png" alt="Excerpt of transcript with the header names Speaker Name, Start Time, End Time and Text below a portion of sample dialogue." style="width:100%;" class="figure-img img-fluid lazyload" /></a><figcaption class="figure-caption">Example of transcript CSV formatting as it exports from Adobe Premiere</figcaption></figure>
 
-<p>That said, the tool is not a panacea. While modern recordings in good conditions have extremely high transcription accuracy, poor quality recordings and interviews between two similar sounding people can require significant copyediting. While some negative perspectives of speech to text tools have to do with bias built into machine learning (Link, 2020), others stem from academic double standards expecting written transcripts to be an improved version of the audio rather than a reflection of it. This likely originates from the American roots of oral history transcription at Columbia University, where editors were encouraged to delete “false starts”, audit wording, rearrange passages into topical or chronological order or delete whole sections to transform the transcript from “what might be dismissed as hearsay into a document that has much the standing of legal disposition”, essentially divorcing the transcript from the audio.(Freund, 2024) Since then, critics of this practice of “cleaning up” spoken language have emerged, pointing out how it introduces unnecessary editorial bias. As University of Kentucky’s Susan Emily Allen notes in Resisting the Editorial Ego: Editing Oral History:</p>
+<p>That said, the tool is not a panacea. While modern recordings in good conditions have extremely high transcription accuracy, poor quality recordings or interviews between two similar sounding people can require significant copyediting. While some negative perspectives of speech to text tools have to do with bias built into machine learning (Link, 2020), others stem from academic double standards expecting written transcripts to be <strong>an improved version of the audio rather than a reflection of it</strong>.</p>
+
+<p>Some of these notions may originate from the American roots of oral history transcription at the Oral History Research Office of Columbia University in 1948, where editors were encouraged to delete “false starts”, audit wording, rearrange passages into topical or chronological order or delete whole sections to transform the transcript from “what might be dismissed as hearsay into a document that has much the standing of legal disposition”, essentially divorcing the transcript from the audio.(Freund, 2024) Since then, critics of this practice of “cleaning up” spoken language have emerged, pointing out how it introduces unnecessary editorial bias. As University of Kentucky’s Susan Emily Allen notes in <em>Resisting the Editorial Ego: Editing Oral History:</em></p>
 
 <blockquote class="quote">
 These texts take it upon themselves to glean "what words are meaningful." Meaningful for whom? For the editor? Such subjectivism is not only rather irresponsible scholarship but, however well-intentioned, an attempt to legislate truth. (Allen, 1982)
 </blockquote>
 
+<div class="symbol-container">
+    <p class="symbol">&#10042;</p>
+</div>
+
 <h2 id="python-text-mining">Python Text Mining</h2>
 
-<p>After using the web based text mining tool Voyant while developing the Taylor Wilderness Research Station digital collection, I wanted to create a text mining tool from scratch using Python. This would allow the targeting of specific words and phrases, create custom tagging categories and stopwords for each collection.</p>
+<p>After initial tests using the web based text mining tool Voyant while developing the <a href="https://www.lib.uidaho.edu/digital/taylor-archive/">Taylor Wilderness Research Station</a> digital collection, I wanted to create a text mining tool from scratch using Python that would allow me to identify specific words and phrases, create custom tagging categories and “stopwords”(words removed from text before processing and analysis) for each collection.</p>
 
 <p>Once the CSVs of the transcript are added to a folder in the Python workspace, the code begins with importing Pandas library for data manipulation, the Natural Language Toolkit and TextBlob for language processing and sentiment analysis. Additionally, Regular Expressions and the ‘<strong>collections.Counter</strong>’ function are added for text mining and tallying results.</p>
 
-<p>Next, the ‘<strong>preprocess_text</strong>’ function removes words of four characters or fewer, eliminates punctuation, and converts all text to lowercase. CSV file paths are constructed, and the text data is concatenated into a single string corpus. Stopwords are removed, word frequency is counted and the 100 most frequent words are generated when the code is run.</p>
+<p>Next, the ‘<strong>preprocess_text</strong>’ function removes words of four characters or fewer, eliminates punctuation, and converts all text to lowercase. CSV file paths are constructed, and the text data is concatenated into a single string corpus. Stopwords are removed, word frequency is counted and the <strong>100 most frequent words are generated</strong> when the code is run.</p>
 
-<p>Below this header material in the Python file are three categories: general, geographic and custom. These categories contains sections, which will ultimately become the tags:</p>
+<p>Below this header material in the Python file are three categories: <strong>general, geographic and custom</strong>. These categories contains sections, which will ultimately become the tags:</p>
 
 <ul>
   <li>
@@ -213,11 +215,15 @@ These texts take it upon themselves to glean "what words are meaningful." Meanin
 <figure class="figure d-block text-center p-3">
     <a class="spotlight" href="/images/dl_03.png"><img data-src="/images/dl_03.png" alt=" List of tags with their associated words tallied in descending order." style="width:100%;" class="figure-img img-fluid lazyload" /></a><figcaption class="figure-caption">Example of Text Mining Tool Output for the Rural Women's History Project</figcaption></figure>
 
-<p>Future iterations of this template will modularize the General, Geographic and Custom sections for easier navigation instead of its current form as a single, expansive Python file. See <strong>Appendix 1</strong> for an excerpt of the current iteration of this code.</p>
+<p>Future iterations of this template will modularize the General, Geographic and Custom sections for easier navigation instead of its current form as a single, expansive Python file. See <strong>Appendix 1</strong> in the final section of this site for an excerpt of the current iteration of this code.</p>
+
+<div class="symbol-container">
+    <p class="symbol">&#10042;</p>
+</div>
 
 <h2 id="primary-tag-sheet">Primary Tag Sheet</h2>
 
-<p>Once this text mining data is produced from the combined transcripts, it is entered into a “primary tag sheet” in Google Sheets, located in the same folder as the transcripts for student workers to edit. Using the Text to Columns function, tag names are split into column A and their associated words into column B.</p>
+<p>Once this text mining data is produced from the combined transcripts, it is entered into a “primary tag sheet” in Google Sheets, located in the same folder as the transcripts for student workers to edit. Using the <strong>Text to Columns</strong> function, tag names are split into column A and their associated words into column B.</p>
 
 <figure class="figure d-block text-center p-3">
     <a class="spotlight" href="/images/dl_04.png"><img data-src="/images/dl_04.png" alt="Example of the formatted primary tags sheet with headers reading tags in column A and associated words in column B." style="width:50%;" class="figure-img img-fluid lazyload" /></a><figcaption class="figure-caption">Excerpt of a formatted primary tags sheet, utilizing the Rural Women's History Projecrt text mining tool output</figcaption></figure>
@@ -239,19 +245,23 @@ These texts take it upon themselves to glean "what words are meaningful." Meanin
 
 <p>The student worker then opens the Apps Script extension on the transcription sheet and enters the code detailed in <strong>Appendix 2</strong>. Transcribers only need to make two adjustments: change the sheet name of the transcript they are editing on line 6, and the URL of their primary tag sheet on line 13, then save and run the code. This will automatically search the text for these associated words and fill in their tag name within the tag column of the transcript.</p>
 
-<p><strong>This process is not intended to replace human transcribers but shifts the focus from manual tagging to copy editing, reducing heavy lifting and repetition</strong>. If a tag is inappropriate, the transcriber should paste it to the additions or subtractions column so these changes are preserved for future runs of the Apps Script and reflected in the final import to the OHD digital collection.</p>
+<div class="symbol-container">
+    <p class="symbol">&#10042;</p>
+</div>
 
-<p>Crucially, student workers are encouraged to modify tag names, add or remove associated words and create new categories based on trends they identify within the primary tag sheet. Once these changes are made, the Apps Script can be quickly re-run on all transcripts to implement these updates . Rather than simply asking student workers to transcribe recordings—work that offers little to highlight on a CV and can lead to burnout and high turnover—this process allows transcribers to engage in coding, create and modify tags, and see those changes reflected instantly through the Apps Script process. Other advantages include:</p>
+<h2 id="copyediting">Copyediting</h2>
+
+<p><strong>This process is not intended to replace human transcribers,</strong> rather shifting the focus from manual tagging to copy editing, reducing heavy lifting and repetition. If a tag is inappropriate, the transcriber pastes it to the additions or subtractions column so these changes are preserved for future runs of the Apps Script and reflected in the final import to the OHD digital collection.</p>
+
+<p>Crucially, student workers are encouraged to modify tag names, add or remove associated words and create new categories based on trends they identify within the primary tag sheet. Once these changes are made, the Apps Script can be quickly re-run on all transcripts to implement these updates . Rather than simply asking student workers to transcribe recordings—work that offers little to highlight on a CV and can lead to burnout and high turnover—this process allows transcribers to engage in coding, create and modify tags, and see those changes reflected instantly through the Apps Script process.</p>
+
+<p>Other advantages include:</p>
 
 <ul>
   <li><strong>All tags use a controlled vocabulary.</strong></li>
   <li><strong>Tagging is more accurate, detailed, and relevant</strong>, helping researchers quickly identify thematic connections.</li>
   <li><strong>Tagging establishes a knowledge framework</strong> relevant to the collection that transcribers might lack in historical, scientific, or regional contexts key to the recordings.</li>
 </ul>
-
-<div class="symbol-container">
-    <p class="symbol">&#10042;</p>
-</div>
 
 
 </div>

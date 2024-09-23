@@ -12,6 +12,8 @@ gallery: true
 
 The University of Idaho’s Digital Scholarship and Open Strategies (DSOS) department was established in 2008 to digitize the newly acquired _International Jazz Collection_ and has since expanded to over 130 digital collections.[1] These collections are built with CollectionBuilder, an “open source framework for creating digital collections and exhibit websites that are driven by metadata and modern static web technology”. A companion framework named Oral History as Data (OHD) was developed in 2016 to visualize encoded transcriptions and allow researchers to explore oral history recordings by keywords and tags. In this presentation, “tagging” refers to a custom set of subject designations that can be tailored by the transcriber depending on the recording’s content and themes. 
 
+**(still example of OHD tags)**
+
 Our physical workspace at the library is the Center for Digital Inquiry and Learning (CDIL), where our Digital Labs Manager, Digital Project Manager and I support the labor of a small group of student workers and fellowship recipients, generally around 2-5 a semester. Both the CollectionBuilder and OHD frameworks have been designed to be completely open source, only requiring someone with access to Google Sheets, a text editor, a GitHub account and minimal software installation to create, maintain and export digital collections. 
 
 <div class="symbol-container">
