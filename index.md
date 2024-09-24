@@ -6,7 +6,10 @@ gallery: true
 
 {% include gallery-figure.html img="dl_cover.gif" alt="Animated gif of the title of this paper with colored lines connecting reel to reel audio spools." width="100%" %}
 
-[Git Repository for Transcript Mining Tool](https://github.com/Scholarly-Projects/transcript_mining_base)
+
+[Slides](https://indd.adobe.com/view/eea371ad-3ab8-44f5-abab-bb642d331ee2)
+
+[Git Repository for Transcript Text Mining Tool](https://github.com/Scholarly-Projects/transcript_mining_base)
 
 ## Overview
 
