@@ -6,7 +6,7 @@ gallery: true
 
 {% include feature/nav-menu.html sections="Premiere;Python Text Mining;Primary Tag Sheet;Formatting;Apps Script;Copyediting" %}
 
-**(Expanded process visualization: download, premiere, Python, Primary Tag Sheet, Apps Script connects to all Transcripts)**
+{% include gallery-figure.html img="overall_process.png" alt="Visualization of workflow from audio files to CSV to Python text mining and Google Sheets" caption="Workflow Visualization" width="100%" %}
 
 ## Premiere
 

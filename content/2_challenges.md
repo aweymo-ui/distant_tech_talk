@@ -16,7 +16,7 @@ Despite this advancement, the initial transcription process has remained a signi
 
 Similar lapses in identification and vulnerability to bias were also at play when student workers created tags for OHD transcriptions. Tags—ranging from locations, people, or even abstract emotions—were created by student workers as they identified them throughout the transcription process. This approach led to multiple challenges: an uncontrolled vocabulary, knowledge gaps amongst student workers, who may lack the historical, scientific or regional knowledge to identify the tags within dialogue and tags that are not apparent if transcribing a recording linearly.
 
-**(challenges of linear listening graphic)**
+{% include gallery-figure.html img="linear_listening.png" alt="Visualization of two arrows signifying the challenges of tagging oral history collections while listening through linearly" caption="Challenges of Linear Listening Visualization" width="100%" %}
 
 Linear listening, creating tags by listening to an oral history collection from beginning to end, may mislead transcribers by establishing repeating themes throughout an early recording that doesn't occur across the collection and missing themes that only begin to appear in later recordings. The name of this presentation, distant listening, is an alternate approach to text mine transcriptions and generate tags before the student worker copy editing process with the goal of producing richer, more accurate tagging, allowing researchers to more easily identify connections across oral history collections. 
 
