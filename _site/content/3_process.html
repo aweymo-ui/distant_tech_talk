@@ -48,7 +48,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 
 
-<!-- Last build date: 2024-09-23 -->
+<!-- Last build date: 2024-09-27 -->
   </head>
 
   <body class="d-flex flex-column h-100">
@@ -126,15 +126,50 @@
 
 
 <p class="h6 shadow-sm p-3 about-nav sticky-top" style="background-color: #F0F8FF;">
-    Contents: <a class="mx-2" href="#premiere">Premiere</a> | <a class="mx-2" href="#python-text-mining">Python Text Mining</a> | <a class="mx-2" href="#primary-tag-sheet">Primary Tag Sheet</a> | <a class="mx-2" href="#formatting">Formatting</a> | <a class="mx-2" href="#apps-script">Apps Script</a> | <a class="mx-2" href="#copyediting">Copyediting</a> 
+    Contents: <a class="mx-2" href="#overview">Overview</a> | <a class="mx-2" href="#premiere">Premiere</a> | <a class="mx-2" href="#python-text-mining">Python Text Mining</a> | <a class="mx-2" href="#primary-tag-sheet">Primary Tag Sheet</a> | <a class="mx-2" href="#formatting">Formatting</a> | <a class="mx-2" href="#apps-script">Apps Script</a> | <a class="mx-2" href="#copyediting">Copyediting</a> 
 </p>
 
 <figure class="figure d-block text-center p-3">
     <a class="spotlight" href="/images/overall_process.png"><img data-src="/images/overall_process.png" alt="Visualization of workflow from audio files to CSV to Python text mining and Google Sheets" style="width:100%;" class="figure-img img-fluid lazyload" /></a><figcaption class="figure-caption">Workflow Visualization</figcaption></figure>
 
+<h2 id="overview">Overview</h2>
+
+<p>To summarize the process before going into detail:</p>
+
+<ul>
+  <li>
+    <p>Audio files are transcribed into CSV files be Premiere</p>
+  </li>
+  <li>
+    <p>These CSVs are made into individual Google Sheets and also added to the Python Transcription Mining Tool</p>
+  </li>
+  <li>
+    <p>Within the tool, these items are concatenated and this combined document is then searched for all of the associated words and phrases of each of the subjects built into the tool</p>
+  </li>
+  <li>
+    <p>The tool provides a tally of the identified associated words and subjects identified across all transcriptions</p>
+  </li>
+  <li>
+    <p>This data is used to create the “Primary Tag Sheet” in another Google Sheet</p>
+  </li>
+  <li>
+    <p>Using the Apps Script function, all individual transcripts are linked to the primary tag sheet so their tag fields are automatically filled with the subject head on the line of dialogue with the identified associated words and phrases</p>
+  </li>
+  <li>
+    <p>This way, new categories or associated words can be added or removed to the Primary Tag Sheet and these changes can be implemented across all individual transcripts by simply running the Apps Script</p>
+  </li>
+  <li>
+    <p>Individual changes can be implemented during the student worker led copy editing process to catch any data driven errors</p>
+  </li>
+</ul>
+
+<div class="symbol-container">
+    <p class="symbol">&#10042;</p>
+</div>
+
 <h2 id="premiere">Premiere</h2>
 
-<p>When I joined in fall 2023, the department was principally using a free Otter.ai account for transcription services with mixed success. Drawing from my previous experience working for a digital encyclopedia, I tested Adobe Premiere’s transcription tools and found it uniquely well-suited for the Oral History as Data framework.</p>
+<p>Drawing from my previous experience working oral history recordings for a digital encyclopedia, I tested Adobe Premiere’s transcription tools and found it uniquely well-suited for the Oral History as Data framework.</p>
 
 <p><strong>Advantages include</strong>:</p>
 
@@ -162,7 +197,9 @@
 <figure class="figure d-block text-center p-3">
     <a class="spotlight" href="/images/dl_01.png"><img data-src="/images/dl_01.png" alt="Excerpt of transcript with the header names Speaker Name, Start Time, End Time and Text below a portion of sample dialogue." style="width:100%;" class="figure-img img-fluid lazyload" /></a><figcaption class="figure-caption">Example of transcript CSV formatting as it exports from Adobe Premiere</figcaption></figure>
 
-<p>That said, the tool is not a panacea. While modern recordings in good conditions have extremely high transcription accuracy, poor quality recordings or interviews between two similar sounding people can require significant copyediting. While some negative perspectives of speech to text tools have to do with bias built into machine learning (Link, 2020), others stem from academic double standards expecting written transcripts to be <strong>an improved version of the audio rather than a reflection of it</strong>.</p>
+<p>That said, the tool is not a panacea. While modern recordings in good conditions have extremely high transcription accuracy, poor quality recordings or interviews between two similar sounding people can require significant copyediting. Recent work by the Matt Miller of the Library of Congress has me very interested in creating custom speech to text tools using Whisper(.cpp) to possibly help improve on these inaccuracies.[3]</p>
+
+<p>To veer this tech talk into theory for a moment, while some negative perspectives of speech to text tools have to do with bias built into machine learning (Link, 2020), others stem from academic double standards expecting written transcripts to be <strong>an improved version of the audio rather than a reflection of it</strong>.</p>
 
 <p>Some of these notions may originate from the American roots of oral history transcription at the Oral History Research Office of Columbia University in 1948, where editors were encouraged to delete “false starts”, audit wording, rearrange passages into topical or chronological order or delete whole sections to transform the transcript from “what might be dismissed as hearsay into a document that has much the standing of legal disposition”, essentially divorcing the transcript from the audio.(Freund, 2024) Since then, critics of this practice of “cleaning up” spoken language have emerged, pointing out how it introduces unnecessary editorial bias. As University of Kentucky’s Susan Emily Allen notes in <em>Resisting the Editorial Ego: Editing Oral History:</em></p>
 
@@ -189,7 +226,7 @@ These texts take it upon themselves to glean "what words are meaningful." Meanin
     <p><strong>General</strong>: agriculture, animals, clothing, conflict, crime, culture, economy, education, environment, family, food and drink, happiness, hardship, health, history, indigenous, labor, migration, recreation, religion, technology</p>
   </li>
   <li>
-    <p><strong>Geographic (based loosely on migration statistics from the 1910 Idaho census[3])</strong>: basque, britain, canada, china, finland, france, germany, greece, idaho, india, ireland, italy, japan, mexico, norway, philippines, poland, portugal, scotland, spain, sweden</p>
+    <p><strong>Geographic (based loosely on migration statistics from the 1910 Idaho census[4])</strong>: basque, britain, canada, china, finland, france, germany, greece, idaho, india, ireland, italy, japan, mexico, norway, philippines, poland, portugal, scotland, spain, sweden</p>
   </li>
   <li>
     <p><strong>Custom (example from our Rural Women’s History Project</strong>): Marriage and Divorce, Motherhood, Reproductive Rights</p>
@@ -213,16 +250,16 @@ These texts take it upon themselves to glean "what words are meaningful." Meanin
 <figure class="figure d-block text-center p-3">
     <a class="spotlight" href="/images/dl_02.png"><img data-src="/images/dl_02.png" alt="Screenshot of Visual Studio Code, displaying a section with associated words around the migration tag." style="width:100%;" class="figure-img img-fluid lazyload" /></a><figcaption class="figure-caption">Complete section of the migration tag within the Python file</figcaption></figure>
 
+<div class="symbol-container">
+    <p class="symbol">&#10042;</p>
+</div>
+
 <p>These produced a total of 2,250 associated words across the 45 sections. The script then tallies these words and produces the output shown below:</p>
 
 <figure class="figure d-block text-center p-3">
     <a class="spotlight" href="/images/dl_03.png"><img data-src="/images/dl_03.png" alt=" List of tags with their associated words tallied in descending order." style="width:100%;" class="figure-img img-fluid lazyload" /></a><figcaption class="figure-caption">Example of Text Mining Tool Output for the Rural Women's History Project</figcaption></figure>
 
-<p>Future iterations of this template will modularize the General, Geographic and Custom sections for easier navigation instead of its current form as a single, expansive Python file. See <strong>Appendix 1</strong> in the final section of this site for an excerpt of the current iteration of this code.</p>
-
-<div class="symbol-container">
-    <p class="symbol">&#10042;</p>
-</div>
+<p>Future iterations of this template will modularize the General, Geographic and Custom sections for easier navigation instead of its current form as a single, expansive Python file. See <strong>Appendix 1</strong> in the final section of this site for an excerpt of the current iteration of this code or the entire GitHub repository that is linked on the landing page to the site for this presentation.</p>
 
 <h2 id="primary-tag-sheet">Primary Tag Sheet</h2>
 

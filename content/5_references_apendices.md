@@ -24,7 +24,9 @@ Allen SE. Resisting the editorial ego: editing oral history. Oral Hist Rev. 1982
 
 [2] Speech to Text in Premiere Pro FAQ. Adobe; [cited 2024 Jul 8]. Available from: https://helpx.adobe.com/content/help/en/premiere-pro/using/speech-to-text-faq.html
 
-[3] Department of Commerce and Labor, Bureau of Statistics. Thirteenth Census of the United States: 1910. Statistics for Idaho. Washington (DC): Government Printing Office; 1913. [cited 2024 Jul 8]. Available from: https://www2.census.gov/library/publications/decennial/1910/abstract/statistics-for-idaho.pdf
+[3] Matt Miller. “Lomax Whisper,” September 12, 2024. https://thisismattmiller.com/post/lomax-whisper/.
+
+[4] Department of Commerce and Labor, Bureau of Statistics. Thirteenth Census of the United States: 1910. Statistics for Idaho. Washington (DC): Government Printing Office; 1913. [cited 2024 Jul 8]. Available from: https://www2.census.gov/library/publications/decennial/1910/abstract/statistics-for-idaho.pdf
 
 ## Appendices
 

@@ -4,13 +4,37 @@ nav: Process
 gallery: true
 ---
 
-{% include feature/nav-menu.html sections="Premiere;Python Text Mining;Primary Tag Sheet;Formatting;Apps Script;Copyediting" %}
+{% include feature/nav-menu.html sections="Overview;Premiere;Python Text Mining;Primary Tag Sheet;Formatting;Apps Script;Copyediting" %}
 
 {% include gallery-figure.html img="overall_process.png" alt="Visualization of workflow from audio files to CSV to Python text mining and Google Sheets" caption="Workflow Visualization" width="100%" %}
 
+## Overview
+
+To summarize the process before going into detail:
+
+* Audio files are transcribed into CSV files be Premiere 
+
+* These CSVs are made into individual Google Sheets and also added to the Python Transcription Mining Tool
+
+* Within the tool, these items are concatenated and this combined document is then searched for all of the associated words and phrases of each of the subjects built into the tool
+
+* The tool provides a tally of the identified associated words and subjects identified across all transcriptions
+
+* This data is used to create the "Primary Tag Sheet" in another Google Sheet
+
+* Using the Apps Script function, all individual transcripts are linked to the primary tag sheet so their tag fields are automatically filled with the subject head on the line of dialogue with the identified associated words and phrases
+
+* This way, new categories or associated words can be added or removed to the Primary Tag Sheet and these changes can be implemented across all individual transcripts by simply running the Apps Script
+
+* Individual changes can be implemented during the student worker led copy editing process to catch any data driven errors
+
+<div class="symbol-container">
+    <p class="symbol">&#10042;</p>
+</div>
+
 ## Premiere
 
-When I joined in fall 2023, the department was principally using a free Otter.ai account for transcription services with mixed success. Drawing from my previous experience working for a digital encyclopedia, I tested Adobe Premiere’s transcription tools and found it uniquely well-suited for the Oral History as Data framework. 
+Drawing from my previous experience working oral history recordings for a digital encyclopedia, I tested Adobe Premiere’s transcription tools and found it uniquely well-suited for the Oral History as Data framework. 
 
 **Advantages include**: 
 
@@ -28,7 +52,9 @@ When I joined in fall 2023, the department was principally using a free Otter.ai
 
 {% include gallery-figure.html img="dl_01.png" alt="Excerpt of transcript with the header names Speaker Name, Start Time, End Time and Text below a portion of sample dialogue." caption="Example of transcript CSV formatting as it exports from Adobe Premiere" width="100%" %}
 
-That said, the tool is not a panacea. While modern recordings in good conditions have extremely high transcription accuracy, poor quality recordings or interviews between two similar sounding people can require significant copyediting. While some negative perspectives of speech to text tools have to do with bias built into machine learning (Link, 2020), others stem from academic double standards expecting written transcripts to be **an improved version of the audio rather than a reflection of it**. 
+That said, the tool is not a panacea. While modern recordings in good conditions have extremely high transcription accuracy, poor quality recordings or interviews between two similar sounding people can require significant copyediting. Recent work by the Matt Miller of the Library of Congress has me very interested in creating custom speech to text tools using Whisper(.cpp) to possibly help improve on these inaccuracies.[3]
+
+To veer this tech talk into theory for a moment, while some negative perspectives of speech to text tools have to do with bias built into machine learning (Link, 2020), others stem from academic double standards expecting written transcripts to be **an improved version of the audio rather than a reflection of it**. 
 
 Some of these notions may originate from the American roots of oral history transcription at the Oral History Research Office of Columbia University in 1948, where editors were encouraged to delete “false starts", audit wording, rearrange passages into topical or chronological order or delete whole sections to transform the transcript from “what might be dismissed as hearsay into a document that has much the standing of legal disposition”, essentially divorcing the transcript from the audio.(Freund, 2024) Since then, critics of this practice of "cleaning up" spoken language have emerged, pointing out how it introduces unnecessary editorial bias. As University of Kentucky’s Susan Emily Allen notes in _Resisting the Editorial Ego: Editing Oral History:_
 
@@ -52,7 +78,7 @@ Below this header material in the Python file are three categories: **general, g
 
 * **General**: agriculture, animals, clothing, conflict, crime, culture, economy, education, environment, family, food and drink, happiness, hardship, health, history, indigenous, labor, migration, recreation, religion, technology
 
-* **Geographic (based loosely on migration statistics from the 1910 Idaho census[3])**: basque, britain, canada, china, finland, france, germany, greece, idaho, india, ireland, italy, japan, mexico, norway, philippines, poland, portugal, scotland, spain, sweden 
+* **Geographic (based loosely on migration statistics from the 1910 Idaho census[4])**: basque, britain, canada, china, finland, france, germany, greece, idaho, india, ireland, italy, japan, mexico, norway, philippines, poland, portugal, scotland, spain, sweden 
 
 * **Custom (example from our Rural Women’s History Project**): Marriage and Divorce, Motherhood, Reproductive Rights
 
@@ -66,15 +92,15 @@ Each section has a list of fifty associated words that the script is searching f
 
 {% include gallery-figure.html img="dl_02.png" alt="Screenshot of Visual Studio Code, displaying a section with associated words around the migration tag." caption="Complete section of the migration tag within the Python file" width="100%" %}
 
+<div class="symbol-container">
+    <p class="symbol">&#10042;</p>
+</div>
+
 These produced a total of 2,250 associated words across the 45 sections. The script then tallies these words and produces the output shown below:
 
 {% include gallery-figure.html img="dl_03.png" alt=" List of tags with their associated words tallied in descending order." caption="Example of Text Mining Tool Output for the Rural Women's History Project" width="100%" %}
 
-Future iterations of this template will modularize the General, Geographic and Custom sections for easier navigation instead of its current form as a single, expansive Python file. See **Appendix 1** in the final section of this site for an excerpt of the current iteration of this code.
-
-<div class="symbol-container">
-    <p class="symbol">&#10042;</p>
-</div>
+Future iterations of this template will modularize the General, Geographic and Custom sections for easier navigation instead of its current form as a single, expansive Python file. See **Appendix 1** in the final section of this site for an excerpt of the current iteration of this code or the entire GitHub repository that is linked on the landing page to the site for this presentation.
 
 ## Primary Tag Sheet
 
